@@ -1,0 +1,13 @@
+{%for movie in info%}
+Title: {{movie.name}}
+<br>
+
+<form method="GET" action="/students/{{user_id}}/parties/{{party_id}}/add_movie/">
+  <input type="hidden" name="movie_id" value="{{ movie.id }}">
+  <input type="submit" value="Add {{movie.name}} ot this viewing party!">
+</form>
+
+<br>
+<br>
+<br>
+{% endfor %}

@@ -1,0 +1,9 @@
+<h1> Hady's Viewing Party</h1>
+
+<a href="students/create/"><button>Create a new student</button></a>
+
+<h2>List of Students</h2>
+{% for user in users %}
+    <a href="students/{{user.id}}/"><button>{{user}}</button></a>
+    <br>
+{% endfor %}

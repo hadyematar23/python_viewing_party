@@ -1,0 +1,15 @@
+{%for movie in movies%}
+{{movie}}
+<br>
+<br>
+{% endfor %}
+
+
+Here is your {{name}} Party 
+
+<form method="GET" action="/movies/search/">
+  <input type="text" name="q" placeholder="Search movies...">
+  <input type="hidden" name="party_id" value="{{ party_id }}">
+  <input type="hidden" name="user_id" value="{{ user_id }}">
+  <input type="submit" value="Search">
+</form>

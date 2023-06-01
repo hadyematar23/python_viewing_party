@@ -1,0 +1,12 @@
+<h2>{{info}}'s Dashboard</h2>
+<br>
+{{info}}
+<br>
+
+Create Party: 
+<a href="/students/{{info.id}}/parties/create/"><button>Create Party</button></a>
+<br>
+<br>
+{%for party in student_parties%}
+<a href="/students/{{info.id}}/parties/{{party.id}}/"><button>Go to {{party}} Show Page</button></a>
+{% endfor %}

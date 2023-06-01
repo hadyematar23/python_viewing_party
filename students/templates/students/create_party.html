@@ -1,0 +1,11 @@
+<h2>Create New Party</h2>
+<form method="post" action="/students/{{ info.id }}/parties/create/">
+    {% csrf_token %}
+    <label for="name">First Name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="date">Datet:</label>
+    <input type="datetime-local" id="date" name="date"><br>
+
+    <button type="submit">Create</button>
+</form>
