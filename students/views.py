@@ -35,7 +35,7 @@ def view_party(request, user_id, party_id):
     return render(request, 'students/view_party.html', {'party_id': party_id, 'user_id': user_id, 'movies': all_movies, 'name': Party.objects.get(pk=party_id).name})
 
 def search_movies(request):
-    x = QueryMovie(request.GET['q'])    
+    x = QueryMovie(request.GET['q'])
     movie_array = []
     for movie in x['results']:
         new = Movie.objects.create(name=movie['original_title'])
